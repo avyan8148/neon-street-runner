@@ -2,7 +2,7 @@ alert("JS LOADED");
 
 const $ = (sel) => /** @type {HTMLElement} */ (document.querySelector(sel));
 
-const canvas = /** @type {HTMLCanvasElement} */ ($("#game"));
+const canvas = document.querySelector("canvas");
 const ctx = /** @type {CanvasRenderingContext2D} */ (canvas.getContext("2d"));
 const sceneCanvas = document.createElement("canvas");
 const sceneCtx = /** @type {CanvasRenderingContext2D} */ (sceneCanvas.getContext("2d"));
