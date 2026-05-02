@@ -1,5 +1,7 @@
 window.onload = () => {
-
+setInterval(() => {
+  ctx.drawImage(sceneCanvas, 0, 0);
+}, 1000 / 60);
 const $ = (sel) => document.querySelector(sel) || {};
 
 const canvas = document.querySelector("canvas");
