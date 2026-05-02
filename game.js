@@ -1,3 +1,5 @@
+alert("JS LOADED");
+
 const $ = (sel) => /** @type {HTMLElement} */ (document.querySelector(sel));
 
 const canvas = /** @type {HTMLCanvasElement} */ ($("#game"));
