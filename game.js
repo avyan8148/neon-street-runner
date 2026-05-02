@@ -1,6 +1,6 @@
 alert("JS LOADED");
 
-const $ = (sel) => /** @type {HTMLElement} */ (document.querySelector(sel));
+const $ = (sel) => document.querySelector(sel) || {};
 
 const canvas = document.querySelector("canvas");
 const ctx = /** @type {CanvasRenderingContext2D} */ (canvas.getContext("2d"));
