@@ -2795,4 +2795,15 @@ function startGame() {
 }
 
 startGame();
+  function frame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "red";
+    ctx.fillRect(100, 100, 50, 50);
+
+    requestAnimationFrame(frame);
+  }
+
+  frame();
+
 };
