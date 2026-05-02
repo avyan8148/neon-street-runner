@@ -2791,5 +2791,6 @@ function startGame() {
         setInterval(draw, 1000 / 60);
     }
 }
+
+    startGame();
 };
-startGame();
