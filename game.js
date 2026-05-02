@@ -2792,5 +2792,5 @@ function startGame() {
     }
 }
 
-    startGame();
+startGame();
 };
