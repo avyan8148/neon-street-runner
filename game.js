@@ -2786,24 +2786,3 @@ const audio = (() => {
 
   return { ensure, resume, playSfx, tickEngine, stopEngine, startMusic, stopMusic };
 })();
-function startGame() {
-    if (typeof gameLoop === "function") {
-        setInterval(gameLoop, 1000 / 60);
-    } else if (typeof draw === "function") {
-        setInterval(draw, 1000 / 60);
-    }
-}
-
-startGame();
-  function frame() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "red";
-    ctx.fillRect(100, 100, 50, 50);
-
-    requestAnimationFrame(frame);
-  }
-
-  frame();
-
-};
