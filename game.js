@@ -2529,7 +2529,7 @@ function init() {   console.log("INIT RUNNING");
   state.carColor = loadCarColor();
   state.carStripe = loadStripe();
   state.musicOn = loadToggle(STORAGE_MUSIC, true);
-  state.sfxOn = loadToggle(STORAGE_SFX, true);
+  state.sfxOn = loadToggle(STORAGE_SFX, true); 
   syncDeviceUI();
   syncModeUI();
   syncGraphicsUI();
@@ -2542,6 +2542,8 @@ function init() {   console.log("INIT RUNNING");
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden && state.running) state.paused = true;
+    state.running = true;
+requestAnimationFrame(frame);
   });
 
   // Allow starting via gamepad.
