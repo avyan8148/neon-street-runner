@@ -2552,7 +2552,7 @@ function init() {
   requestAnimationFrame(frame);
 }
 
-init();
+window.onload = init;
 const audio = (() => {
   /** @type {AudioContext|null} */
   let ac = null;
