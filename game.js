@@ -2788,3 +2788,30 @@ const audio = (() => {
 
   return { ensure, resume, playSfx, tickEngine, stopEngine, startMusic, stopMusic };
 })();
+// 🚀 FORCE GAME START (ignore menu issues)
+
+window.onload = () => {
+  try {
+    if (typeof init === "function") init();
+  } catch (e) {
+    console.log("Init error:", e);
+  }
+
+  try {
+    state.running = true;
+  } catch (e) {
+    console.log("State error:", e);
+  }
+
+  function forceLoop() {
+    try {
+      if (typeof update === "function") update(0.016);
+      if (typeof draw === "function") draw();
+    } catch (e) {
+      console.log("Loop error:", e);
+    }
+    requestAnimationFrame(forceLoop);
+  }
+
+  forceLoop();
+};
