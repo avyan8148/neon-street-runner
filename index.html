@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Neon Street Runner</title>
+  <meta charset="UTF-8">
+  <title>Test Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a12;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin: 10px;
+    }
+
+    canvas {
+      display: block;
+      margin: 10px;
+      border: 2px solid #444;
+      background: black;
+    }
+  </style>
 </head>
+
 <body>
-<!-- update -->
+
   <h1>TEST PAGE</h1>
 
-  <canvas id="game" width="800" height="400" style="border:1px solid black;"></canvas>
+  <!-- IMPORTANT: ID must match your JS -->
+  <canvas id="game" width="1000" height="600"></canvas>
 
-  <script>
-    alert("INLINE JS WORKING");
-  </script>
-
-  <script src="game.js"></script>
+  <!-- Link your JS file here -->
+  <script src="script.js"></script>
 
 </body>
 </html>
