@@ -2457,7 +2457,7 @@ function drawGrain(ctx2, w, h) {
   ctx2.restore();
 }
 
-function frame(ms) {
+function frame(ms) {   console.log("FRAME RUNNING");
   const dt = Math.min(0.05, Math.max(0.001, (ms - state.lastMs) / 1000));
   state.lastMs = ms;
 
@@ -2521,7 +2521,7 @@ function frame(ms) {
   requestAnimationFrame(frame);
 }
 
-function init() {
+function init() {   console.log("INIT RUNNING");
   state.device = loadDevice();
   state.mode = loadMode();
   state.graphics = loadGraphics();
